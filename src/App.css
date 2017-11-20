@@ -21,6 +21,7 @@
 
 .wrapright {
   display: flex;
+  margin-right: 10px;
 }
 
 p {
@@ -70,3 +71,4 @@ p {
   width: 50px;
   margin-left: 10px;
 }
+

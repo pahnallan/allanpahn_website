@@ -8,6 +8,7 @@
 .card-icon {
 	height: 150px;
 	background-color: #222;
+	display: flex;
 }
 
 .card-body {
@@ -21,4 +22,10 @@
 
 .card-description {
 	padding: 5px;
+}
+
+.tech-logo {
+	width: 200px;
+	height: 140px;
+	margin: auto;
 }
