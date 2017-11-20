@@ -1,0 +1,24 @@
+.card {
+	width: 250px;
+	height: 300px;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+	margin: 10px;
+}
+
+.card-icon {
+	height: 150px;
+	background-color: #222;
+}
+
+.card-body {
+	text-align: left;
+	padding: 10px;
+}
+
+.card-title {
+	padding: 5px;
+}
+
+.card-description {
+	padding: 5px;
+}

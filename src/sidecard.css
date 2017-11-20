@@ -1,0 +1,38 @@
+.sidecard {
+	width: 790px;
+	height: 200px;
+	margin: 10px;
+	display: flex;
+}
+
+.sidecard-icon {
+	width: 200px;
+	height: 200px;
+	display: flex;
+}
+
+.img-allan {
+	margin: auto;
+	border-radius: 100px;
+	width: 90%;
+	height: 90%;
+}
+
+.sidecard-body {
+	text-align: left;
+	padding: 10px;
+	width: 380px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	overflow: auto;
+}
+
+.sidecard-title {
+	padding: 5px;
+	font-size: larger;
+}
+
+.sidecard-description {
+	padding: 5px;
+}
