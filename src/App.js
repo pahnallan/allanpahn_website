@@ -14,6 +14,12 @@ import NodeLogo from './img/node-logo.svg';
 import SQLiteLogo from './img/sqlite-logo.svg';
 import PythonLogo from './img/python-logo.svg';
 import ReactLogo from './img/react-logo.svg';
+import C4Logo from './img/c4-logo.jpg';
+import SequenceLogo from './img/sequence-logo.jpg';
+
+import ContactPhone from 'material-ui-icons/ContactPhone';
+import Email from 'material-ui-icons/Email';
+import AccountCircle from 'material-ui-icons/AccountCircle';
 
 import './App.css';
 import Card from './card';
@@ -72,12 +78,12 @@ class App extends Component {
     const connect4_card = {
       title : "Connect 4",
       description : "Built using React Connect 4 is part of squadmingo.com",
-      logo : SQLiteLogo,
+      logo : C4Logo,
     };
     const sequence_card = {
       title : "Sequence",
       description : "Built using React, Sequence is an online multiplayer game part of squadmingo.com",
-      logo : MongoDBLogo,
+      logo : SequenceLogo,
     }
     const squadmingo_card = {
       title : "SquadMingo",
@@ -87,17 +93,17 @@ class App extends Component {
     const email_card = {
       title : "Email",
       description : "pahnallan@gmail.com",
-      logo : SQLiteLogo,
+      icon : (<Email color={'#70B2C1'} style={{width: '140', height : '140', }} />),
     };
     const mobile_card = {
       title : "Mobile",
       description : "(916) 803-5274",
-      logo : MongoDBLogo,
+      icon : (<ContactPhone color={'#70B2C1'} style={{width: '140', height : '140', }} />),
     }
     const github_card = {
       title : "GitHub",
       description : "https://github.com/pahnallan",
-      logo : MongoDBLogo,
+      icon : (<AccountCircle color={'#70B2C1'} style={{width: '140', height : '140', }} />),
     }
     return (
       <div className="App">

@@ -9,6 +9,8 @@
 	height: 150px;
 	background-color: #222;
 	display: flex;
+	justify-content: center;
+	align-items: center
 }
 
 .card-body {
