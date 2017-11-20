@@ -4,12 +4,14 @@ import logo from './img/ap-logo.svg';
 import sacramento from './img/sacramento.jpg'
 
 // Icons
-import WebLogo from './img/html5-css-javascript-logos.png';
-import CSharpLogo from './img/csharp-logo.png';
-import MongoDBLogo from './img/mongodb-logo.png';
-import NodeLogo from './img/node-logo.png';
-import SQLiteLogo from './img/sqlite-logo.png';
-import PythonLogo from './img/python-logo.png';
+import WebLogo from './img/web-logo.svg';
+import CSharpLogo from './img/csharp-logo.svg';
+import CPlusPlusLogo from './img/cplusplus-logo.svg';
+import NetLogo from './img/net-logo.svg';
+import MongoDBLogo from './img/mongodb-logo.svg';
+import NodeLogo from './img/node-logo.svg';
+import SQLiteLogo from './img/sqlite-logo.svg';
+import PythonLogo from './img/python-logo.svg';
 import ReactLogo from './img/react-logo.svg';
 
 import './App.css';
@@ -34,9 +36,19 @@ class App extends Component {
       logo : ReactLogo,
     };
     const net_card = {
-      title : ".NET/C#",
+      title : ".NET",
+      description : "3+ years experience",
+      logo : NetLogo,
+    };
+    const csharp_card = {
+      title : "C#",
       description : "3+ years experience",
       logo : CSharpLogo,
+    };
+    const cplusplus_card = {
+      title : "C++",
+      description : "2+ years experience",
+      logo : CPlusPlusLogo,
     };
     const python_card = {
       title : "Python",
@@ -74,6 +86,8 @@ class App extends Component {
             <Card cardInfo={nodejs_card}/>
             <Card cardInfo={react_card}/>
             <Card cardInfo={net_card}/>
+            <Card cardInfo={csharp_card}/>
+            <Card cardInfo={cplusplus_card}/>
             <Card cardInfo={python_card}/>
             <Card cardInfo={sqlite_card}/>
             <Card cardInfo={mongo_card}/>
