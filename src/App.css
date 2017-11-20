@@ -19,12 +19,22 @@
   justify-content: space-between;
 }
 
+.App-footer {
+  width: 100%;  background-color: #222222e6;
+  height: 60px;
+  color: white;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+}
+
 .wrapright {
   display: flex;
   margin-right: 10px;
 }
 
-p {
+a {
   color: white;
   margin: 8px;
   text-decoration: none;
@@ -53,6 +63,7 @@ p {
   width: 810px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .cover {

@@ -1,6 +1,5 @@
 .sidecard {
 	width: 790px;
-	height: 200px;
 	margin: 10px;
 	display: flex;
 }
@@ -35,4 +34,31 @@
 
 .sidecard-description {
 	padding: 5px;
+}
+
+@media (max-width: 640px) {
+	.sidecard-title {
+		text-align: center;
+	}
+	
+	.card {
+		width: 90%;
+	}
+
+	.sidecard {
+		width: 90%;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+
+@media (max-width: 840px) and (min-width: 641px) {
+	.sidecard-title {
+		text-align: center;
+	}
+	.sidecard {
+		width: 540px;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 }

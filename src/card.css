@@ -29,3 +29,9 @@
 	height: 140px;
 	margin: auto;
 }
+
+@media (max-width: 640px) {
+	.card {
+		width: 90%;
+	}
+}

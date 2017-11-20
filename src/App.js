@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {HashRouter, Switch, Route, Link } from 'react-router-dom'
 import logo from './img/ap-logo.svg';
 import sacramento from './img/sacramento.jpg'
+import ScrollableAnchor from 'react-scrollable-anchor';
 
 // Icons
 import WebLogo from './img/web-logo.svg';
@@ -65,13 +66,43 @@ class App extends Component {
       description : "1+ years experience",
       logo : MongoDBLogo,
     }
+    const connect4_card = {
+      title : "Connect 4",
+      description : "Built using React Connect 4 is part of squadmingo.com",
+      logo : SQLiteLogo,
+    };
+    const sequence_card = {
+      title : "Sequence",
+      description : "Built using React, Sequence is an online multiplayer game part of squadmingo.com",
+      logo : MongoDBLogo,
+    }
+    const squadmingo_card = {
+      title : "SquadMingo",
+      description : "Built using React and NodeJS, SquadMingo is an online multiplayer game room where users can play and chat with friends over Socket.io",
+      logo : MongoDBLogo,
+    }
+    const email_card = {
+      title : "Email",
+      description : "pahnallan@gmail.com",
+      logo : SQLiteLogo,
+    };
+    const mobile_card = {
+      title : "Mobile",
+      description : "(916) 803-5274",
+      logo : MongoDBLogo,
+    }
+    const github_card = {
+      title : "GitHub",
+      description : "https://github.com/pahnallan",
+      logo : MongoDBLogo,
+    }
     return (
       <div className="App">
         <header className="App-header">
           <div className="wrapright">
-            <Link to={'Home'}> <p> Home </p> </Link>
-            <Link to={'Projects'}> <p> Projects </p> </Link>
-            <Link to={'Contact'}> <p> Contact </p> </Link>
+            <a href='#technical'> Technical </a>
+            <a href='#projects'> Projects </a>
+            <a href='#contact'> Contact </a>
           </div>
           <img className="logo" src={logo} />
         </header>
@@ -79,20 +110,50 @@ class App extends Component {
         <div className="card-container">
           <SideCard />
         </div>
-        <div className="card-container">
-          <div className="header-title"> Technical Skills </div>
-          <div className="card-row">
-            <Card cardInfo={web_card}/>
-            <Card cardInfo={nodejs_card}/>
-            <Card cardInfo={react_card}/>
-            <Card cardInfo={net_card}/>
-            <Card cardInfo={csharp_card}/>
-            <Card cardInfo={cplusplus_card}/>
-            <Card cardInfo={python_card}/>
-            <Card cardInfo={sqlite_card}/>
-            <Card cardInfo={mongo_card}/>
+        <ScrollableAnchor id={'technical'}>
+          <div className="card-container">
+            <div className="header-title"> Technical Skills </div>
+            <div className="card-row">
+              <Card cardInfo={web_card}/>
+              <Card cardInfo={nodejs_card}/>
+              <Card cardInfo={react_card}/>
+              <Card cardInfo={net_card}/>
+              <Card cardInfo={csharp_card}/>
+              <Card cardInfo={cplusplus_card}/>
+              <Card cardInfo={python_card}/>
+              <Card cardInfo={sqlite_card}/>
+              <Card cardInfo={mongo_card}/>
+            </div>
           </div>
-        </div>
+        </ScrollableAnchor>
+        <ScrollableAnchor id={'projects'}>
+          <div className="card-container">
+            <div className="header-title"> Projects </div>
+            <div className="card-row">
+              <Card cardInfo={squadmingo_card}/>
+              <Card cardInfo={connect4_card}/>
+              <Card cardInfo={sequence_card}/>
+            </div>
+          </div>
+        </ScrollableAnchor>
+        <ScrollableAnchor id={'contact'}>
+          <div className="card-container">
+            <div className="header-title"> Contact </div>
+            <div className="card-row">
+              <Card cardInfo={email_card}/>
+              <Card cardInfo={mobile_card}/>
+              <Card cardInfo={github_card}/>
+            </div>
+          </div>
+        </ScrollableAnchor>
+        <header className="App-footer">
+          <div className="wrapright">
+            <a href='#technical'> Technical </a>
+            <a href='#projects'> Projects </a>
+            <a href='#contact'> Contact </a>
+          </div>
+          <p> Copyright Allan Pahn 2017 </p>
+        </header>
       </div>
     );
   }
