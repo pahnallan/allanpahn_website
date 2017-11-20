@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {HashRouter, Switch, Route, Link } from 'react-router-dom'
-import logo from './logo.svg';
+import logo from './img/ap-logo.svg';
 import sacramento from './img/sacramento.jpg'
 import './App.css';
 import Card from './card';
@@ -17,9 +17,12 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <Link to={'Contact'}> <p> Contact </p> </Link>
-          <Link to={'Projects'}> <p> Projects </p> </Link>
-          <Link to={'Home'}> <p> Home </p> </Link>
+          <div className="wrapright">
+            <Link to={'Home'}> <p> Home </p> </Link>
+            <Link to={'Projects'}> <p> Projects </p> </Link>
+            <Link to={'Contact'}> <p> Contact </p> </Link>
+          </div>
+          <img className="logo" src={logo} />
         </header>
         <img src={sacramento} className="cover" />
         <div className="card-container">
