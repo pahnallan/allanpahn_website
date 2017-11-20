@@ -106,7 +106,10 @@ class App extends Component {
           </div>
           <img className="logo" src={logo} />
         </header>
-        <img src={sacramento} className="cover" />
+        <div className="cover-card">
+          <h1 className="cover-content"> ALLAN PAHN </h1>
+          <h1 className="cover-desc"> DESIGNER. DEVELOPER. DREAMER. </h1>
+        </div>
         <div className="card-container">
           <SideCard />
         </div>

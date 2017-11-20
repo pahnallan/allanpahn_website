@@ -66,6 +66,35 @@ a {
   justify-content: center;
 }
 
+.cover-card {
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-image: url(img/sacramento.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+
+}
+
+.cover-content {
+  margin: 0px;
+  padding-top: 70px;
+  padding-bottom: 40px;
+  color: white;
+  font-size: 75px;
+  font-family: fantasy;
+}
+
+.cover-desc {
+  margin: 0px;
+  padding-bottom: 10px;
+  color: white;
+  font-size: 65px;
+  font-family: fantasy;
+}
+
 .cover {
   width: 100%;
   height: 640px;
@@ -73,7 +102,7 @@ a {
 
 .header-title {
   width: 100%;
-  font-size: larger;
+  font-size: 35px;
   margin: 10px;
 }
 
@@ -83,3 +112,6 @@ a {
   margin-left: 10px;
 }
 
+@media (max-width: 640px) {
+
+}
