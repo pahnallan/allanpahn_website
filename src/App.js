@@ -20,6 +20,9 @@ import Card from './card';
 import SideCard from './sidecard'
 
 class App extends Component {
+  componentDidMount() {
+    document.title = "Allan Pahn";
+  }
   render() {
     const web_card = {
       title: "HTML/CSS/Javascript",
