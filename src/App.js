@@ -83,12 +83,12 @@ class App extends Component {
     }
     const connect4_card = {
       title : "Connect 4",
-      description : "Built using React Connect 4 is part of squadmingo.com",
+      description : "Built using React. Connect 4 is part of the SquadMingo application and involves users playing over the internet.",
       logo : C4Logo,
     };
     const sequence_card = {
       title : "Sequence",
-      description : "Built using React, Sequence is an online multiplayer game part of squadmingo.com",
+      description : "Built using React. Sequence is an online multiplayer game where a user attempts to get 5 in a row. This is a part of the SquadMingo game application",
       logo : SequenceLogo,
     }
     const squadmingo_card = {

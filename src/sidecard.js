@@ -11,7 +11,7 @@ class SideCard extends Component {
         </div>
         <div className="sidecard-body">
           <div className="sidecard-title">About me</div>
-          <div className="sidecard-description">My name is <b>Allan Pahn</b> and I'm a software engineer based in Sacramento, California. My passion includes programming, eating seafood, and taking my dog Charlie out for walks. If you wish to reach out to me for any reason, please use the Contact section - I very much appreciate your time and interest.</div>
+          <div className="sidecard-description">My name is <b>Allan Pahn</b> and I'm a software engineer based in Sacramento, California. My passion includes programming, eating seafood, and taking my dog Charlie out for walks. If you wish to reach out to me for any reason, please use the Contact section. I greatly appreciate your time and interest.</div>
         </div>
       </div>
     );
