@@ -7,6 +7,7 @@ import IconButton from 'material-ui/IconButton';
 import MenuItem from 'material-ui/MenuItem';
 import IconMenu from 'material-ui/IconMenu';
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
+import ReactGA from 'react-ga';
 
 // Icons
 import WebLogo from './img/web-logo.svg';
@@ -32,9 +33,18 @@ import SideCard from './sidecard'
 
 
 class App extends Component {
+  logPageView() {
+    ReactGA.set({page : window.location.pathname + window.location.search});
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }
+
   componentDidMount() {
     document.title = "Allan Pahn";
+    ReactGA.initialize('UA-110003744-1');
+    this.logPageView();
+    console.log("App Mounted");
   }
+
   render() {
     const web_card = {
       title: "HTML/CSS/Javascript",
