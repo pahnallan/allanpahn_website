@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 .App {
   text-align: center;
+  font-family: Roboto,sans-serif;
 }
 
 .App-logo {
@@ -38,6 +41,7 @@ a {
   color: white;
   margin: 8px;
   text-decoration: none;
+  font-size: large;
 }
 
 .App-title {
