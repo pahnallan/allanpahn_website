@@ -112,6 +112,21 @@ a {
   margin-left: 10px;
 }
 
-@media (max-width: 640px) {
+.dropdown-ref {
+  margin: 0px;
+}
 
+.menu-icon {
+  margin-right: 10px;
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .menu-icon {
+    display: flex;
+  }
+
+  .wrapright {
+    display: none;
+  }
 }

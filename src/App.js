@@ -3,6 +3,10 @@ import {HashRouter, Switch, Route, Link } from 'react-router-dom'
 import logo from './img/ap-logo.svg';
 import sacramento from './img/sacramento.jpg'
 import ScrollableAnchor from 'react-scrollable-anchor';
+import IconButton from 'material-ui/IconButton';
+import MenuItem from 'material-ui/MenuItem';
+import IconMenu from 'material-ui/IconMenu';
+import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 
 // Icons
 import WebLogo from './img/web-logo.svg';
@@ -20,10 +24,12 @@ import SequenceLogo from './img/sequence-logo.jpg';
 import ContactPhone from 'material-ui-icons/ContactPhone';
 import Email from 'material-ui-icons/Email';
 import AccountCircle from 'material-ui-icons/AccountCircle';
+import Menu from 'material-ui-icons/Menu';
 
 import './App.css';
 import Card from './card';
 import SideCard from './sidecard'
+
 
 class App extends Component {
   componentDidMount() {
@@ -113,6 +119,21 @@ class App extends Component {
             <a href='#projects'> Projects </a>
             <a href='#contact'> Contact </a>
           </div>
+          <div className="menu-icon">
+            <IconMenu
+              iconButtonElement={<IconButton style={{ width: 60, height: 60}} iconStyle={{width: 40, height:40, color: 'white'}}><NavigationMenu /></IconButton>}
+            >
+              <a className="dropdown-ref" href='#technical'> 
+                <MenuItem value="1"> Technical </MenuItem>
+              </a>
+              <a className="dropdown-ref" href='#projects'> 
+                <MenuItem value="2"> Projects </MenuItem>
+              </a>
+              <a className="dropdown-ref" href='#contact'> 
+                <MenuItem value="3"> Contacts </MenuItem>
+              </a>
+            </IconMenu>
+          </div>
           <img className="logo" src={logo} />
         </header>
         <div className="cover-card">
@@ -159,11 +180,6 @@ class App extends Component {
           </div>
         </ScrollableAnchor>
         <header className="App-footer">
-          <div className="wrapright">
-            <a href='#technical'> Technical </a>
-            <a href='#projects'> Projects </a>
-            <a href='#contact'> Contact </a>
-          </div>
           <p> Copyright Allan Pahn 2017 </p>
         </header>
       </div>
