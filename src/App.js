@@ -9,27 +9,11 @@ import IconMenu from 'material-ui/IconMenu';
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 import ReactGA from 'react-ga';
 
-// Icons
-import WebLogo from './img/web-logo.svg';
-import CSharpLogo from './img/csharp-logo.svg';
-import CPlusPlusLogo from './img/cplusplus-logo.svg';
-import NetLogo from './img/net-logo.svg';
-import MongoDBLogo from './img/mongodb-logo.svg';
-import NodeLogo from './img/node-logo.svg';
-import SQLiteLogo from './img/sqlite-logo.svg';
-import PythonLogo from './img/python-logo.svg';
-import ReactLogo from './img/react-logo.svg';
-import C4Logo from './img/c4-logo.jpg';
-import SequenceLogo from './img/sequence-logo.jpg';
-
-import ContactPhone from 'material-ui-icons/ContactPhone';
-import Email from 'material-ui-icons/Email';
-import AccountCircle from 'material-ui-icons/AccountCircle';
-import Menu from 'material-ui-icons/Menu';
-
 import './App.css';
 import Card from './card';
 import SideCard from './sidecard'
+
+import cardDataModel from './models/cardmodel'; 
 
 
 class App extends Component {
@@ -121,6 +105,12 @@ class App extends Component {
       description : "https://github.com/pahnallan",
       icon : (<AccountCircle color={'#70B2C1'} style={{width: '140', height : '140', }} />),
     }
+
+    // Take the data model defined in cardmodel.js to create cards corresponding to each one.
+    const skillCards = cardDataModel.skillsCardList.map((data) => { return (<Card cardInfo={data}/>) });
+    const projectCards = cardDataModel.projectsCardList.map((data) => { return (<Card cardInfo={data}/>) } );
+    const contactsCards = cardDataModel.contactsCardList.map((data) => { return (<Card cardInfo={data}/>) } );
+
     return (
       <div className="App">
         <header className="App-header">
@@ -157,15 +147,7 @@ class App extends Component {
           <div className="card-container">
             <div className="header-title"> Technical Skills </div>
             <div className="card-row">
-              <Card cardInfo={web_card}/>
-              <Card cardInfo={nodejs_card}/>
-              <Card cardInfo={react_card}/>
-              <Card cardInfo={net_card}/>
-              <Card cardInfo={csharp_card}/>
-              <Card cardInfo={cplusplus_card}/>
-              <Card cardInfo={python_card}/>
-              <Card cardInfo={sqlite_card}/>
-              <Card cardInfo={mongo_card}/>
+              {skillCards}
             </div>
           </div>
         </ScrollableAnchor>
@@ -173,9 +155,7 @@ class App extends Component {
           <div className="card-container">
             <div className="header-title"> Projects </div>
             <div className="card-row">
-              <Card cardInfo={squadmingo_card}/>
-              <Card cardInfo={connect4_card}/>
-              <Card cardInfo={sequence_card}/>
+              {projectCards}
             </div>
           </div>
         </ScrollableAnchor>
@@ -183,9 +163,7 @@ class App extends Component {
           <div className="card-container">
             <div className="header-title"> Contact </div>
             <div className="card-row">
-              <Card cardInfo={email_card}/>
-              <Card cardInfo={mobile_card}/>
-              <Card cardInfo={github_card}/>
+              {contactsCards}
             </div>
           </div>
         </ScrollableAnchor>
