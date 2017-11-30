@@ -1,3 +1,21 @@
+// SVG Logos
+import WebLogo from './img/web-logo.svg';
+import CSharpLogo from './img/csharp-logo.svg';
+import CPlusPlusLogo from './img/cplusplus-logo.svg';
+import NetLogo from './img/net-logo.svg';
+import MongoDBLogo from './img/mongodb-logo.svg';
+import NodeLogo from './img/node-logo.svg';
+import SQLiteLogo from './img/sqlite-logo.svg';
+import PythonLogo from './img/python-logo.svg';
+import ReactLogo from './img/react-logo.svg';
+import C4Logo from './img/c4-logo.jpg';
+import SequenceLogo from './img/sequence-logo.jpg';
+// Material UI SVG LOGOS
+import ContactPhone from 'material-ui-icons/ContactPhone';
+import Email from 'material-ui-icons/Email';
+import AccountCircle from 'material-ui-icons/AccountCircle';
+import Menu from 'material-ui-icons/Menu';
+
 // Skill Models
 
 const web_card = {
