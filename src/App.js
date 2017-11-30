@@ -9,6 +9,7 @@ import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 import ReactGA from 'react-ga';
 
 import './App.css';
+import Blog from "./components/blog";
 import Card from './components/card';
 import SideCard from './components/sidecard'
 
@@ -42,6 +43,7 @@ class App extends Component {
             <a href='#technical'> Technical </a>
             <a href='#projects'> Projects </a>
             <a href='#contact'> Contact </a>
+            <a href='/blog'> Blog </a>
           </div>
           <div className="menu-icon">
             <IconMenu
@@ -56,13 +58,16 @@ class App extends Component {
               <a className="dropdown-ref" href='#contact'> 
                 <MenuItem value="3"> Contacts </MenuItem>
               </a>
+              <Link className="dropdown-ref" to={'/blog'}>
+                <MenuItem value="4"> Blog </MenuItem>
+              </Link>
             </IconMenu>
           </div>
           <img className="logo" src={logo} />
         </header>
 
         <Switch>
-          <Route path="/" render={(props) => (
+          <Route exact path="/" render={(props) => (
             <div>
               <div className="cover-card">
                 <h1 className="cover-content"> ALLAN PAHN </h1>
@@ -97,6 +102,7 @@ class App extends Component {
               </ScrollableAnchor>
             </div>
           )} />
+          <Route exact path="/blog" component={Blog}/>
         </Switch>
         <header className="App-footer">
           <p> Copyright Allan Pahn 2017 </p>
