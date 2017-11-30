@@ -60,37 +60,44 @@ class App extends Component {
           </div>
           <img className="logo" src={logo} />
         </header>
-        <div className="cover-card">
-          <h1 className="cover-content"> ALLAN PAHN </h1>
-          <h1 className="cover-desc"> DESIGNER. DEVELOPER. DREAMER. </h1>
-        </div>
-        <div className="card-container">
-          <SideCard />
-        </div>
-        <ScrollableAnchor id={'technical'}>
-          <div className="card-container">
-            <div className="header-title"> Technical Skills </div>
-            <div className="card-row">
-              {skillCards}
+
+        <Switch>
+          <Route path="/" render={(props) => (
+            <div>
+              <div className="cover-card">
+                <h1 className="cover-content"> ALLAN PAHN </h1>
+                <h1 className="cover-desc"> DESIGNER. DEVELOPER. DREAMER. </h1>
+              </div>
+              <div className="card-container">
+                <SideCard />
+              </div>
+              <ScrollableAnchor id={'technical'}>
+                <div className="card-container">
+                  <div className="header-title"> Technical Skills </div>
+                  <div className="card-row">
+                    {skillCards}
+                  </div>
+                </div>
+              </ScrollableAnchor>
+              <ScrollableAnchor id={'projects'}>
+                <div className="card-container">
+                  <div className="header-title"> Projects </div>
+                  <div className="card-row">
+                    {projectCards}
+                  </div>
+                </div>
+              </ScrollableAnchor>
+              <ScrollableAnchor id={'contact'}>
+                <div className="card-container">
+                  <div className="header-title"> Contact </div>
+                  <div className="card-row">
+                    {contactsCards}
+                  </div>
+                </div>
+              </ScrollableAnchor>
             </div>
-          </div>
-        </ScrollableAnchor>
-        <ScrollableAnchor id={'projects'}>
-          <div className="card-container">
-            <div className="header-title"> Projects </div>
-            <div className="card-row">
-              {projectCards}
-            </div>
-          </div>
-        </ScrollableAnchor>
-        <ScrollableAnchor id={'contact'}>
-          <div className="card-container">
-            <div className="header-title"> Contact </div>
-            <div className="card-row">
-              {contactsCards}
-            </div>
-          </div>
-        </ScrollableAnchor>
+          )} />
+        </Switch>
         <header className="App-footer">
           <p> Copyright Allan Pahn 2017 </p>
         </header>
