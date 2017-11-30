@@ -1,3 +1,5 @@
+// Skill Models
+
 const web_card = {
       title: "HTML/CSS/Javascript",
       description: "4+ years experience",
@@ -44,6 +46,7 @@ const mongo_card = {
   logo : MongoDBLogo,
 }
 
+// Project Models
 
 const connect4_card = {
   title : "Connect 4",
@@ -61,6 +64,7 @@ const squadmingo_card = {
   logo : MongoDBLogo,
 }
 
+// Contact Models
 
 const email_card = {
   title : "Email",
@@ -77,3 +81,9 @@ const github_card = {
   description : "https://github.com/pahnallan",
   icon : (<AccountCircle color={'#70B2C1'} style={{width: '140', height : '140', }} />),
 }
+
+// Assign cards to a list to be iterated through
+
+const skillsCardList = [web_card, nodejs_card, react_card, net_card, csharp_card, cplusplus_card, python_card, sqlite_card, mongo_card];
+const projectsCardList = [connect4_card, sequence_card, squadmingo_card];
+const contactsCardList = [email_card, mobile_card, github_card];
