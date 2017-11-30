@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {HashRouter, Switch, Route, Link } from 'react-router-dom'
 import logo from './img/ap-logo.svg';
-import sacramento from './img/sacramento.jpg'
 import ScrollableAnchor from 'react-scrollable-anchor';
 import IconButton from 'material-ui/IconButton';
 import MenuItem from 'material-ui/MenuItem';
@@ -10,10 +9,10 @@ import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 import ReactGA from 'react-ga';
 
 import './App.css';
-import Card from './card';
-import SideCard from './sidecard'
+import Card from './components/card';
+import SideCard from './components/sidecard'
 
-import cardDataModel from './models/cardmodel'; 
+import {cardDataModel} from './models/cardmodels'; 
 
 
 class App extends Component {

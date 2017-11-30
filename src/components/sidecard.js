@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+
+import allanSquare from '../img/allan-square.jpg';
 import './sidecard.css';
-import allanSquare from './img/allan-square.jpg'
 
 class SideCard extends Component {
   render() {
