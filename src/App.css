@@ -22,6 +22,10 @@
   justify-content: space-between;
 }
 
+.anchor-height-offset {
+  height: 60px;
+}
+
 .App-footer {
   width: 100%;  background-color: #222222e6;
   height: 60px;

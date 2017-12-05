@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {HashRouter, Switch, Route, Link } from 'react-router-dom'
+import {Switch, Route, Link } from 'react-router-dom'
 import logo from './img/ap-logo.svg';
 import ScrollableAnchor from 'react-scrollable-anchor';
 import IconButton from 'material-ui/IconButton';
@@ -32,9 +32,9 @@ class App extends Component {
   render() {
 
     // Take the data model defined in cardmodel.js to create cards corresponding to each one.
-    const skillCards = cardDataModel.skillsCardList.map((data) => { return (<Card cardInfo={data}/>) });
-    const projectCards = cardDataModel.projectsCardList.map((data) => { return (<Card cardInfo={data}/>) } );
-    const contactsCards = cardDataModel.contactsCardList.map((data) => { return (<Card cardInfo={data}/>) } );
+    const skillCards = cardDataModel.skillsCardList.map((data, i) => { return (<Card key={i} cardInfo={data}/>) });
+    const projectCards = cardDataModel.projectsCardList.map((data, i) => { return (<Card key={i} cardInfo={data}/>) } );
+    const contactsCards = cardDataModel.contactsCardList.map((data, i) => { return (<Card key={i} cardInfo={data}/>) } );
 
     return (
       <div className="App">
@@ -43,7 +43,7 @@ class App extends Component {
             <a href='#technical'> Technical </a>
             <a href='#projects'> Projects </a>
             <a href='#contact'> Contact </a>
-            <a href='/blog'> Blog </a>
+            {/*<a href='/blog'> Blog </a>*/}
           </div>
           <div className="menu-icon">
             <IconMenu
@@ -58,12 +58,14 @@ class App extends Component {
               <a className="dropdown-ref" href='#contact'> 
                 <MenuItem value="3"> Contacts </MenuItem>
               </a>
-              <Link className="dropdown-ref" to={'/blog'}>
-                <MenuItem value="4"> Blog </MenuItem>
-              </Link>
+                    {/*
+                  <Link className="dropdown-ref" to={'/blog'}>
+                    <MenuItem value="4"> Blog </MenuItem>
+                  </Link>
+                    */}
             </IconMenu>
           </div>
-          <img className="logo" src={logo} />
+          <img className="logo" src={logo} alt="Failed"/>
         </header>
 
         <Switch>
@@ -77,21 +79,23 @@ class App extends Component {
                 <SideCard />
               </div>
               <ScrollableAnchor id={'technical'}>
+                <div className="anchor-height-offset" />
+              </ScrollableAnchor>
                 <div className="card-container">
                   <div className="header-title"> Technical Skills </div>
                   <div className="card-row">
                     {skillCards}
                   </div>
                 </div>
-              </ScrollableAnchor>
               <ScrollableAnchor id={'projects'}>
+                  <div className="anchor-height-offset" />
+              </ScrollableAnchor>
                 <div className="card-container">
                   <div className="header-title"> Projects </div>
                   <div className="card-row">
                     {projectCards}
                   </div>
                 </div>
-              </ScrollableAnchor>
               <ScrollableAnchor id={'contact'}>
                 <div className="card-container">
                   <div className="header-title"> Contact </div>

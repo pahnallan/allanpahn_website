@@ -3,12 +3,7 @@ import './card.css';
 
 class Card extends Component {
   render() {
-    if (this.props.cardInfo.logo) {
-      var logo = (<img className="tech-logo" src={this.props.cardInfo.logo}/>);
-    }
-    else {
-      var logo = this.props.cardInfo.icon;
-    }
+    const logo = this.props.cardInfo.logo ? (<img className="tech-logo" src={this.props.cardInfo.logo} alt="404"/>) : this.props.cardInfo.icon;
     return (
       <div className="card">
         <div className="card-icon">

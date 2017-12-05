@@ -1,5 +1,5 @@
 // We need to import React because we use JSX at the bottm with the Icons.
-import React, { Component}  from 'react';
+import React  from 'react';
 
 // SVG Logos
 import WebLogo from '../img/web-logo.svg';
@@ -17,7 +17,6 @@ import SequenceLogo from '../img/sequence-logo.jpg';
 import ContactPhone from 'material-ui-icons/ContactPhone';
 import Email from 'material-ui-icons/Email';
 import AccountCircle from 'material-ui-icons/AccountCircle';
-import Menu from 'material-ui-icons/Menu';
 
 // Skill Models
 
